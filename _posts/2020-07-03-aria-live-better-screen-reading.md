@@ -1,28 +1,31 @@
 ---
-title: 'TIL: A better screen reading experience with aria-live'
+title: "TIL: A better screen reading experience with aria-live"
+layout: post
 ---
 
 Let\'s say we have a button that copies a bit of text somewhere on the
 page.
 
-    <button id="copy-btn">Copy text</button>
-{: .language-html}
+```html
+<button id="copy-btn">Copy text</button>
+```
 
 When we click, we change the button text to indicate that the action has
 been completed successfully.
 
-    const copyBtn = document.querySelector('#copy-btn');
-    
-    const changeText = event => {
-      event.target.innerHTML = 'Text copied';
-      
-      setTimeout(() => {
-        event.target.innerHTML = 'Copy text';
-      }, 2000);
-    };
-    
-    copyBtn.addEventListener('click', changeText);
-{: .language-javascript}
+```javascript
+const copyBtn = document.querySelector('#copy-btn');
+
+const changeText = event => {
+  event.target.innerHTML = 'Text copied';
+
+  setTimeout(() => {
+    event.target.innerHTML = 'Copy text';
+  }, 2000);
+};
+
+copyBtn.addEventListener('click', changeText);
+```
 
 For screen readers, this isn\'t a good experience. For example, when
 using VoiceOver when we keyboard navigate to the button, the screen
@@ -58,8 +61,9 @@ generally wait until other actions have finished being called out.
 `aria-live="assertive"` - Indicates the update is high priority and will
 interupt any other actions being called out to give the update.
 
-    <button id="copy-btn" aria-live="assertive">Copy text</button>
-{: .language-html}
+```html
+<button id="copy-btn" aria-live="assertive">Copy text</button>
+```
 
 We\'ll use `assertive` as we want to ensure the user gets instant
 feedback that the text has been copied. Now the screen reader calls out
@@ -73,13 +77,11 @@ be used to improve the screen reading experience.
 > Mojave v10.14.6. Your experience may vary on different
 > browsers/operating systems.
 
-### Further reading   {#further-reading}
+### Further reading {#further-reading}
 
-* [Aria-live - WAI-ARIA spec][1]
-* [Aria-live regions - MDN][2]
-* [Aria-live regions demo - Terrill Thompson blog][3]
-
-
+- [Aria-live - WAI-ARIA spec][1]
+- [Aria-live regions - MDN][2]
+- [Aria-live regions demo - Terrill Thompson blog][3]
 
 [1]: https://www.w3.org/TR/wai-aria-1.1/#aria-live
 [2]: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Live_Regions

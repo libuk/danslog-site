@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ site.title }}</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="/assets/css/prism.css" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <div class="site-header-wrapper">
+      <header class="site-header">
+        <div class="site-header__title-wrapper">
+          <a href="/">
+            <h1 class="site-header__title">Dan's Log</h1>
+          </a>
+          <span>programming • gaming • life lessons</span>
+        </div>
+        {{ include navigation.html }}
+      </header>
+    </div>
+    {{ content }}
+
+    <footer class="site-footer">
+      <span>Dan's Log @ <span class="site-footer__date">2021</span> - Built with love.</span>
+    </footer>
+    <script src="/assets/js/main.js" type="module"></script>
+    <script src="/assets/js/prism.js" type="module"></script>
+  </body>
+</html>
