@@ -1,5 +1,6 @@
 ---
 title: Reviewing code as a junior engineer
+layout: post
 ---
 
 Over the last few years, we\'ve seen an influx of junior engineers in
@@ -13,7 +14,7 @@ as someone just starting out. I do think, however, that my experience
 could have been made easier had I received more guidance on the
 importance of peer review.
 
-### Learning how to deal with criticism   {#learning-how-to-deal-with-criticism}
+### Learning how to deal with criticism {#learning-how-to-deal-with-criticism}
 
 As a junior, I was very protective over my code. I consider myself to be
 a perfectionist, which roughly translates to \"making mistakes scares
@@ -44,7 +45,7 @@ should be ready for that too. But try your best to keep discussions
 solely about the code, because again, you aren\'t the code you write,
 even if someone tries to make it so.
 
-### Improving technical communication   {#improving-technical-communication}
+### Improving technical communication {#improving-technical-communication}
 
 Technical communication is one of the most important skills as an
 engineer. Being able to efficiently communicate with other engineers is
@@ -62,7 +63,7 @@ between other engineers, note down any unfamiliar terms they use so you
 can research later, or better yet, ask the question. Code reviews are a
 great forum to improve your technical communication.
 
-### Use your experience as the measuring stick   {#use-your-experience-as-the-measuring-stick}
+### Use your experience as the measuring stick {#use-your-experience-as-the-measuring-stick}
 
 Ultimately, we write code for other engineers to understand and
 maintain. This means that the harder a codebase is to understand,the
@@ -84,7 +85,7 @@ important for you to ask questions when you\'re unsure of something.
 There will be times when the author will realise a piece of code could
 be written clearer, and this is good news for everyone.
 
-### Isolate code you don\'t understand   {#isolate-code-you-don-t-understand}
+### Isolate code you don\'t understand {#isolate-code-you-don-t-understand}
 
 When reviewing code you\'ll sometimes find syntax that looks unfamiliar.
 I made the point earlier that you should ask questions when you\'re
@@ -102,14 +103,12 @@ run the code yourself, logging values and debugging in the browser. If
 you\'re feeling very curious, step through the code using a
 [debugger][2]{: rel="nofollow"}.
 
-### Conclusion   {#conclusion}
+### Conclusion {#conclusion}
 
 Reviewing code as a junior can be daunting at first, but it should be
 embraced as a way of accelerating your growth as an engineer. Pay
 attention to the discussions being had in code reviews, and use your
 curiosity to discover new things.
-
-
 
 [1]: https://babeljs.io/repl/
 [2]: https://developers.google.com/web/tools/chrome-devtools/javascript/

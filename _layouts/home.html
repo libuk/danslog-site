@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<div class="site-wrapper">
+  <section id="main-content" class="site-content">
+    <h2>Logs</h2>
+
+    <div class="site-content__post">
+      {% for post in site.posts %}
+      <article class="site-content__post__item">
+        <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+        <section class="site-content__post__item__meta">
+          <time
+            class="site-content__post__item__date"
+            datetime="{{post.date | date: '%Y-%m-%d' }}"
+          >
+            {{post.date | date: "%d %b %Y" }}
+          </time>
+        </section>
+        <p>{{ post.excerpt }}</p>
+        <span class="site-content__post__item__cta"
+          ><a href="{{ post.url }}">Read more</a></span
+        >
+      </article>
+      {% endfor %}
+    </div>
+  </section>
+</div>

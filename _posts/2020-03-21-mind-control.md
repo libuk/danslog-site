@@ -1,5 +1,6 @@
 ---
 title: Mind Control
+layout: post
 ---
 
 Being in the midst of a pandemic has forced me to realise just how much
@@ -10,4 +11,3 @@ address them. Maybe noticing is enough? Maybe the more I\'m aware of
 them, the better my passive brain will get at sorting.
 
 Here\'s to thinking, noticing and washing your hands.
-
