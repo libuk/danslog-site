@@ -25,15 +25,17 @@
           <a href="/">
             <h1 class="site-header__title">Dan's Log</h1>
           </a>
-          <span>programming • gaming • life lessons</span>
         </div>
-        {{ include navigation.html }}
+        {% include black-bird.html %}
       </header>
     </div>
     {{ content }}
 
     <footer class="site-footer">
-      <span>Dan's Log @ <span class="site-footer__date">2021</span> - Built with love.</span>
+      <span
+        >Dan's Log @ <span class="site-footer__date">2021</span> - Built with
+        love.</span
+      >
     </footer>
     <script src="/assets/js/main.js" type="module"></script>
     <script src="/assets/js/prism.js" type="module"></script>

@@ -385,8 +385,7 @@ ol ol {
   padding: var(--space-lg) var(--space-md);
 }
 
-.site-wrapper,
-.site-header {
+.site-wrapper {
   max-width: 800px;
   margin: 0 auto;
 }
@@ -394,11 +393,12 @@ ol ol {
 /** HEADER **/
 
 .site-header-wrapper {
-  padding: var(--space-lg);
+  padding: var(--space-md);
   background-color: var(--color-primary);
 }
 
 .site-header {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -442,6 +442,18 @@ ol ol {
   margin-left: var(--space-md);
 }
 
+.svg_black-bird {
+  width: 55px;
+  position: absolute;
+  left: 95%;
+  transform: translateX(-50%);
+  bottom: -19.5px;
+}
+
+.svg_black-bird path {
+  fill: var(--color-text-dark) !important;
+}
+
 @media screen and (min-width: 40em) {
   .site-header {
     flex-direction: row;
@@ -454,6 +466,10 @@ ol ol {
 
   .nav {
     margin-top: 0;
+  }
+
+  .svg_black-bird {
+    left: 50%;
   }
 }
 
