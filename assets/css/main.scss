@@ -435,7 +435,12 @@ ol ol {
 }
 
 .nav li {
-  font-size: var(--type-sm);
+  font-size: var(--type-md);
+  font-family: 'Sriracha', cursive;
+}
+
+.nav li a {
+  border-bottom: 0;
 }
 
 .nav li + li {
@@ -457,7 +462,7 @@ ol ol {
 @media screen and (min-width: 40em) {
   .site-header {
     flex-direction: row;
-    align-items: initial;
+    align-items: center;
   }
 
   .site-header__title-wrapper {
