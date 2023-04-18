@@ -187,6 +187,7 @@ video {
   font-weight: 400;
   font-style: normal;
   src: url('../fonts/files/Inter-Medium.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -194,6 +195,7 @@ video {
   font-weight: 700;
   font-style: normal;
   src: url('../fonts/files/Inter-ExtraBold.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -201,6 +203,7 @@ video {
   font-weight: 200;
   font-style: normal;
   src: url('../fonts/files/Inter-Light-BETA.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
@@ -208,6 +211,7 @@ video {
   font-weight: 400;
   font-style: normal;
   src: url('../fonts/files/Sriracha-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 /** VARIABLES **/
