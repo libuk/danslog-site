@@ -1,5 +1,6 @@
 ---
-title: "TIL: A better screen reading experience with aria-live"
+title: 'TIL: A better screen reading experience with aria-live'
+permalink: '/logs/aria-live-better-screen-reading'
 layout: post
 ---
 
@@ -16,7 +17,7 @@ been completed successfully.
 ```javascript
 const copyBtn = document.querySelector('#copy-btn');
 
-const changeText = event => {
+const changeText = (event) => {
   event.target.innerHTML = 'Text copied';
 
   setTimeout(() => {
@@ -31,8 +32,8 @@ For screen readers, this isn\'t a good experience. For example, when
 using VoiceOver when we keyboard navigate to the button, the screen
 reader calls out \"Copy text, button\" as expected.
 
-<figure class="kg-card kg-image-card kg-card-hascaption" markdown="1">
-![](/content/images/2020/07/image.png){: .kg-image}
+<figure markdown="1">
+![](/assets/images/aria_copy_text.jpg){: .kg-image}
 <figcaption>
 A highlighted button that reads 'Copy text'
 </figcaption>
@@ -41,17 +42,17 @@ A highlighted button that reads 'Copy text'
 However, when we activate a click it then reads \"Press Text copied,
 button\". It calls it out like a brand new button has appeared and not
 that an action has taken place. This can feel disorientating,
-particularly to users who have impaired vision and rely on sound.
+particularly to users of assistive technologies.
 
-<figure class="kg-card kg-image-card kg-card-hascaption" markdown="1">
-![](/content/images/2020/07/image-1.png){: .kg-image}
+<figure markdown="1">
+![](/assets/images/aria_text_copied.jpg){: .kg-image}
 <figcaption>
 A highlighted button that reads 'Text copied'
 </figcaption>
 </figure>
 
 To fix this, we can use the `aria-live` attribute, which will indicate
-that the element will be updated and that assitive technologies should
+that the element will be updated and that the screen reader should
 alert the user to updates of this element. `aria-live` gets set to a
 politeness level, either `polite` or `assertive`.
 
