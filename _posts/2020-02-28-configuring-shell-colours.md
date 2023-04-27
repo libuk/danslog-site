@@ -8,22 +8,18 @@ default shell colours for listing files made the text hard to read due
 to poor contrast. So I went about finding a way to change those
 defaults.
 
-<!--kg-card-begin: markdown-->
-
-> This guide assumes you\'re using Linux (whether directly or through
-> WSL) or MacOS.
-
-<!--kg-card-end: markdown-->
+> This guide assumes you\'re using Linux (whether directly or virtually, like WSL2).
 
 First let\'s look at our current output of `ls -la`.
 
-<figure class="kg-card kg-image-card" markdown="1">
-![Output of ls -la command shows directories have a blue
-colour](/content/images/2020/02/image-1.png){: .kg-image}
+<figure markdown="1">
+![](/assets/images/directory_yellow_black.jpg){: .kg-image}
+<figcaption>
+Output of ls -la command shows directories have a yellow background with black text.
+</figcaption>
 </figure>
 
-Here we can see the `.oh-my-zsh` directory is presented in blue, while
-the file `.profile` is in white.
+Here we can see the `a_directory` directory is presented with a yellow and background and black text.
 
 ### LS_COLORS {#ls_colors}
 
@@ -32,44 +28,20 @@ the filenames will be displayed in the terminal. This variable can be
 set using the `dircolors` program. You can read more about it on it\'s
 [man page][1].
 
-<!--kg-card-begin: markdown-->
+The `LS_COLORS` variable can be set directly, but for the purpose of this
+guide we\'ll be using `dircolors`. Here's a [solution][2] for using `LS_COLORS` directly.
 
-The LS_COLORS variable can be set directly, but for the purpose of this
-guide we\'ll be using `dircolors`. Here\'s a [solution][2] for achieving
-that.
+### Creating our dircolors config file {#creating-our-dircolors-config-file}
 
-<!--kg-card-end: markdown-->
-
-### dircolors program {#dircolors-program}
-
-Let\'s see what our current settings look like.
-
-```bash
-dircolors -p
-```
-
-This should give us an output of all the settings. The `-p` option is an
-alias for `--print-database`.
-
-<figure class="kg-card kg-image-card" markdown="1">
-![Output of running the dircolors -p
-command](/content/images/2020/02/image.png){: .kg-image}
-</figure>
-
-You should see an output similar to the above. This is our default
-configuration.
-
-### Creating our config file {#creating-our-config-file}
-
-If we want to create a config of our own, we can save this output to a
-file and make our changes.
+We can save the output of the `dircolors` program to create a config file.
 
 ```bash
 dircolors -p > $HOME/.dircolors
 ```
 
-We\'re saving the output to a file called `.dircolors` in our home
-directory. You can save yours in whatever location you prefer.
+We call run the `dircolors` program with the `-p` flag which is short for `--print-database`. This will give us a list of currently configured settings, and we write the output to our config file `.dircolors`.
+
+Here we save the file in our home directory, but you can save yours in whatever location you prefer.
 
 We want our shell to load our new config instead of loading the default.
 Let\'s add some code to our `.bashrc` (or `.zshrc` if you\'re using zsh
@@ -93,35 +65,36 @@ Open the `.dircolors` file in your preferred text editor. We have a some
 comments describing each section and we can see some colour code
 definitions we can use to customise it ourselves.
 
-<figure class="kg-card kg-image-card" markdown="1">
-![Close up of comments describing colour code
-definitions](/content/images/2020/02/image-2.png){: .kg-image}
+<figure markdown="1">
+![](/assets/images/dir_colors_definitions.jpg){: .kg-image}
+<figcaption>
+screenshot of the dircolors program colour code definitions.
+</figcaption>
 </figure>
 
-If we want to set the colour for a directory to red, first we find the
-existing statement and make our changes. In my case it\'s set to blue.
+If we want to set the background colour for a directory to white, first we find the
+existing statement and make our changes. In my case it's set to yellow.
 
 ```bash
-DIR 01;34
+DIR 30;43
 ```
 
-Let\'s change the blue to red.
+Let\'s change the background from yellow to white.
 
 ```bash
-DIR 01;31
+DIR 30;47
 ```
 
-And if we wanted to add a white background, we\'d do the following.
+And the text colour from black to red
 
 ```bash
-DIR 01;31;47
+DIR 31;47
 ```
 
 The syntax represents the following entities separated by a semi-colon
 in the following order.
 
 - `DIR` - we\'re setting a color for directories
-- `01` - the **attribute** code, in this case we\'ll make it bold
 - `31` - the **text color** code, which is set to red
 - `47` - the **background color** code, which is set to white
 
@@ -131,12 +104,14 @@ Let\'s load our new config by using the `source` program.
 source ~/.zshrc
 ```
 
-When we now run `ls -la` the colour of `.oh-my-zsh` should have now
+When we now run `ls -la` the colour of directories should have now
 changed.
 
-<figure class="kg-card kg-image-card" markdown="1">
-![Output of ls -la command shows directories have a white background
-with red text](/content/images/2020/02/image-3.png){: .kg-image}
+<figure markdown="1">
+![](/assets/images/directory_white_red.jpg){: .kg-image}
+<figcaption>
+Output of ls -la command shows directories have a white background with red text
+</figcaption>
 </figure>
 
 There we have it! How to customise the output of `ls` without any extra
