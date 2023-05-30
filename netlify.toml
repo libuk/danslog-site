@@ -1,0 +1,4 @@
+# comment
+[build]
+  command = "bash ./build.sh"
+  publish = "_site"
