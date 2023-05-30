@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/libuk/letterboxd_rss_to_json
+  revision: 74dd553cd23eb145b95fd5050e7220d2b1f49cb7
+  specs:
+    letterboxd_rss_to_json (0.1.0)
+      rss (~> 0.2.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -62,6 +69,8 @@ GEM
       ffi (~> 1.0)
     rexml (3.2.5)
     rouge (4.1.0)
+    rss (0.2.9)
+      rexml
     safe_yaml (1.0.5)
     sass-embedded (1.59.3-aarch64-linux)
       google-protobuf (~> 3.21)
@@ -83,6 +92,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.3.2)
   jekyll-feed (~> 0.12)
+  letterboxd_rss_to_json!
   minima (~> 2.5)
   tzinfo (>= 1, < 3)
   tzinfo-data
