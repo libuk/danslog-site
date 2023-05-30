@@ -2,26 +2,24 @@
 layout: default
 ---
 
-<div class="site-wrapper">
-  <section id="main-content" class="site-content">
-    <h2>Logs</h2>
+<section id="main-content" class="site-content">
+  <h2>Logs</h2>
 
-    <div class="site-content__post">
-      {% for post in site.posts %}
-      <article class="site-content__post__item">
-        <a class="site-content__post__link" href="{{ post.url }}"></a>
-        <h3 class="site-content__post__item__heading">{{ post.title }}</h3>
-        <section class="site-content__post__item__meta">
-          <time
+  <div class="site-content__post">
+    {% for post in site.posts %}
+    <article class="site-content__post__item">
+      <a class="site-content__post__link" href="{{ post.url }}"></a>
+      <h3 class="site-content__post__item__heading">{{ post.title }}</h3>
+      <section class="site-content__post__item__meta">
+        <time
             class="site-content__post__item__date"
             datetime="{{post.date | date: '%Y-%m-%d' }}"
-          >
+            >
             {{post.date | date: "%d %b %Y" }}
-          </time>
-        </section>
-        <p>{{ post.excerpt }}</p>
-      </article>
-      {% endfor %}
-    </div>
-  </section>
-</div>
+        </time>
+      </section>
+      <p>{{ post.excerpt }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
