@@ -21,7 +21,7 @@
 title: Dan's Log
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Hey, I’m Dan Liburd and welcome to Dan’s log, where I share my existential ramblings and programming excursions.
+  Where Dan Liburd shares his existential ramblings and programming excursions.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://danslog.net" # the base hostname & protocol for your site, e.g. http://example.com
 github_username: libuk
