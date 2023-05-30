@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<ul>
+{% for movie in site.data.movies %}
+  <li>
+    <span>{{ movie.title }}</span>
+  </li>
+{% endfor %}
+</ul>
