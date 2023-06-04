@@ -392,17 +392,17 @@ ol ol {
 
 /** WRAPPER **/
 
-.site-wrapper {
+.site-wrapper-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: var(--space-md);
   column-gap: var(--space-xlg);
-  padding: var(--space-lg) var(--space-md);
 }
 
 .site-wrapper {
   max-width: 800px;
   margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
 }
 
 /** HEADER **/
@@ -639,6 +639,25 @@ ol ol {
 .site-post__content blockquote p {
   margin-top: 0;
 }
+
+/** MOVIES **/
+
+.movies-list {
+  display: grid;
+  grid-template-columns: repeat(3, 200px);
+  list-style-type: none;
+  gap: 1rem;
+}
+
+.movies-list__item {
+
+}
+
+.movies-list__image {
+  width: 200px;
+}
+
+/** CODE **/
 
 pre[class*='language-'] {
   margin: var(--space-lg) 0 0;

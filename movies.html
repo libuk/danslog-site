@@ -2,9 +2,12 @@
 layout: default
 ---
 
-<ul>
+<ul class="movies-list">
 {% for movie in site.data.movies %}
-  <li>
+  <li class="movies-list__item">
+    <div class="movies-list__image_wrapper">
+      <img class="movies-list__image" src="{{ movie.image_url }}" />
+    </div>
     <span>{{ movie.title }}</span>
   </li>
 {% endfor %}

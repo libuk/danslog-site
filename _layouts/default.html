@@ -48,7 +48,7 @@
         {% include black-bird.html %}
       </header>
     </div>
-    <div class="site-wrapper">
+    <div class="site-wrapper {% if page.url != '/movies.html' %} site-wrapper-grid {% endif %}">
       {{ content }}
     </div>
 
